@@ -65,8 +65,16 @@
    audio.currentTime = 0; //rewind the current time to zero so you can play sound repeatedly without lag
    audio.play();
    key.classList.add('playing');
-   key.classList.remove
- })
+   
+ });
+
+ function removeTransition(e) {
+   console.log(e);
+ }
+
+ const keys = document.querySelectorAll('.key');
+ keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
 </script>
 
 
